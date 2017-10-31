@@ -19,6 +19,7 @@ Amazon reviews play a part in the final decision of a customer when buying an it
 - Process the statistics side of our analysis : Mean rating per user / product / category, number of reviews per user ...
 - Process the text analysis : Positivity / Negativity of the review, Similarity of the review (Bot detection)
 
-# Questions for TA
+# Questions for TAs
 - Is it possible to use text-based sentiment detection libraries on the cluster ?
 - Is it still possible to change some small part of our project after ? (e.g We find another research questions still in the scope of the project, or add an other dataset in the list like Wikipedia)
+- Is it still in the scope of the ADA project to use machine learning algorithms to predict the pertinence of a review ?
