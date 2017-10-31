@@ -12,11 +12,13 @@ Amazon reviews play a part in the final decision of a customer when buying an it
 
 
 # Dataset
-- We will use the Amazon Review Dataset (http://jmcauley.ucsd.edu/data/amazon/). More precisely, we will process the user review data and the metadata of the products. We will analyze the reviewer's text review with a sentiment analyzer and compare it to the ratings that he gave. With this analysis we expect to construct a model which will tell us if the rating correspond to the text review. We will also analyze the distribution of the ratings per category, items and reviewers to gain insights in the reviews distribution.
+- We will use the Amazon Review Dataset (http://jmcauley.ucsd.edu/data/amazon/). More precisely, we will process the user review data and the metadata of the products. We will analyze the reviewer's text review with a sentiment analyzer and compare it to the ratings that he gave. With this analysis we expect to construct a model which will tell us if the rating correspond to the text review. We will also analyze the distribution of the ratings per category, items and reviewers to gain insights in the reviews distribution and build category of reviewers.
 
 # A list of internal milestones up until project milestone 2
 - Learn to how to process the dataset in the cluster
 - Process the statistics side of our analysis : Mean rating per user / product / category, number of reviews per user ...
 - Process the text analysis : Positivity / Negativity of the review, Similarity of the review (Bot detection)
 
-# Questions for TAa
+# Questions for TA
+- Is it possible to use text-based sentiment detection libraries on the cluster ?
+- Is it still possible to change some small part of our project after ? (e.g We find another research questions still in the scope of the project, or add an other dataset in the list like Wikipedia)
