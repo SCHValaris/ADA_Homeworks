@@ -1,25 +1,25 @@
-# Title 
-Reviews, do you help me ?
+# Reviews, do you help me ?
 
 # Abstract
-Amazon reviews play a part in the final decision of a customer when buying an item. However the reviewers previous experience in the product category, his/her grading exigence are not always detailed in the review, thus the customer may not be able to judge the reviewer point of view, and eventual biases. The goal of our data analysis is to determine the bias of a review and provide this information to the buyer to help him determine the degree of usefulness of the review.
+Amazon reviews play a part in the final decision of a customer when buying an item. However the reviewers previous experience in the product category, his/her grading exigencies are not always detailed in the review, thus the customer may not be able to judge the reviewer point of view, and eventual biases. The goal of our data analysis is to determine the bias of a review and provide this information to the buyer to help him determine the degree of usefulness of the review.
 
 # Research questions
-- Can we determined if a reviewer is biased in his reviews ?
-- Are there reviewers more prone to give useful informations on a new review based on their old reviews ?
+- Can we determine if a reviewer is biased in his reviews ?
+- Are there reviewers more prone to give useful information on a new review based on their old reviews ?
 - Are all reviews trustworthy ? Is it possible to detect fake reviews ?
 - Are reviewers influenced by the price of the products ?
 
 
 # Dataset
-- We will use the Amazon Review Dataset (http://jmcauley.ucsd.edu/data/amazon/). More precisely, we will process the user review data and the metadata of the products. We will analyze the reviewer's text review with a sentiment analyzer and compare it to the ratings that he gave. With this analysis we expect to construct a model which will tell us if the rating correspond to the text review. We will also analyze the distribution of the ratings per category, items and reviewers to gain insights in the reviews distribution and build category of reviewers.
+- We use the Amazon Review Dataset (http://jmcauley.ucsd.edu/data/amazon/). More precisely, we first processed the full ratings dataset and the full electronics category. We then did a more thorough analysis on the 5-core electronics dataset, our pipeline is easily usable to other categories. We tried several sentiment analysis libraries on the reviews to compute the sentiment score. We will now expand our analysis and try to find correlations and interesting insights in our data. More information on the processing can be found in the notebook.
 
-# A list of internal milestones up until project milestone 2
-- Learn to how to process the dataset in the cluster
-- Process the statistics side of our analysis : Mean rating per user / product / category, number of reviews per user ...
-- Process the text analysis : Positivity / Negativity of the review, Similarity of the review (Bot detection)
+# A list of internal milestones up until project milestone 3
+- Complete the large analysis of all the datasets on Spark.
+- Expand and complete the analysis on the 5-cores electronic dataset.
+- Expand the analysis on other categories.
+- Try to optimize the sentiment and similarity analysis.
+- Write the data story.
 
 # Questions for TAs
-- Is it possible to use text-based sentiment detection libraries on the cluster ?
-- Is it still possible to change some small part of our project after ? (e.g We find another research questions still in the scope of the project, or add an other dataset in the list like Wikipedia)
-- Is it still in the scope of the ADA project to use machine learning algorithms to predict the pertinence of a review ?
+- We tried several sentiment analysis libraries and we are not really satisfied of the results: it doesn't detect heavy negativity. Have you any idea of a library which could help us ? We tried NLTK (Vader model), Spacy, Stanford Core NLP. The better results were with NLTK (see notebook).
+- Same question for similarity analysis. We tried Spacy and some custom code (see in notebook).
