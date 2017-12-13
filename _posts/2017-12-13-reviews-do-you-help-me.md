@@ -1,8 +1,0 @@
----
-layout: post
-published: true
-title: 'Reviews, do you help me ?'
----
-## A New Post
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
