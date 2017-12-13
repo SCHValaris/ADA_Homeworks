@@ -1,16 +1,13 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About Us
+subtitle: 
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+We are a team which collaborated in the Applied Data Analysis course given at EPFL in Fall 2017.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+**Members : **
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+* Clément Lefebvre : A student in Computational Science and Engineering.
+* Nelson Antunes : A student in Data Sciences.
+* Vincent Pollet : A student in Computational Science and Engineering.
