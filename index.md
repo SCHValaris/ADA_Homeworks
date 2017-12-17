@@ -20,5 +20,6 @@ The analysis was performed on the set of [amazon reviews](http://jmcauley.ucsd.e
 We can clearly see that the graph is a power law !
 
 {% include BokehGraph_Review_per_Ratings.html %}
-
-{% include BokehGraph_New_Rating.html %}
+<p align="center">
+ {% include BokehGraph_New_Rating.html %}
+</p>
