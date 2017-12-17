@@ -14,9 +14,9 @@ In our analysis, we tried to learn two characteristic of the reviewers :
 
 The analysis was performed on the set of [amazon reviews](http://jmcauley.ucsd.edu/data/amazon/links.html). We first present the data on several category of products, and then narrow our analysis to the Electronic category to present our grading system. 
 
-
-{% include BokehGraph_Review_per_Product.html %}
-
+<p align="center">
+ {% include BokehGraph_Review_per_Product.html %}
+</p>
 We can clearly see that the graph is a power law !
 
 {% include BokehGraph_Review_per_Ratings.html %}
