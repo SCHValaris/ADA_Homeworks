@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Reviews, do you help me ?
+title: Reviews, what are you hiding ?
 subtitle: An analysis of Amazon's reviews
 use-site-title: true
 ---
