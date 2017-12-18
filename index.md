@@ -30,19 +30,17 @@ We can observe that the distribution nearly follows a power law. The majority of
 
 Let's take a look at the distribution of the products in the Electronic category:
 
+![Graph_Sentiment_distribution](/img/Sentiment_distribution.svg)
 <center><em>
- ![Graph_Sentiment_distribution](/img/Sentiment_distribution.svg)
  Distribution of the Sentiments of the reviews of the products in the "Electronic" category </em></center>
 
-
+![Graph_Sentiment_groupby_distribution](/img/Sentiment_distribution_groupby_product.svg)
 <center><em> 
- ![Graph_Sentiment_groupby_distribution](/img/Sentiment_distribution_groupby_product.svg)
  Distribution of average of the sentiment of the reviews, per product in the "Electronic" category 
  </em></center>
 
-
+![Graph_Sentiment_groupby__distribution](/img/Rating_distribution_groupby_product.svg)
 <center><em>
- ![Graph_Sentiment_groupby__distribution](/img/Rating_distribution_groupby_product.svg)
  Distribution of average of the Rating given in the reviews, per product in the "Electronic" category
  </em></center>
 
