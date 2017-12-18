@@ -28,6 +28,7 @@ Before going into the depth of the analysis, let's vizualise the number of revie
 We can observe that the distribution nearly follows a power law. The majority of products (showed by the red line) have a low number of reviews. To perform our analysis we decided to take only the reviewers and products that have at least 5 reviews. For that we use a 5-core dataset. We also chose to focus our analysis on the _Electronics_ category as it offer a lot of product diversity and is less prone to subjectivity than categories like _Books,Video Games_. 
 
 ### 
+Let's take a look at the distribution of the products in the Electronic category:
 
 ![Graph_Sentiment_distribution](/img/Sentiment_distribution.svg)
 <center><em> Distribution of the Sentiments of the reviews of the products in the "Electronic" category </em></center>
