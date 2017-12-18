@@ -40,9 +40,11 @@ We can observe that the distribution nearly follows a power law. The majority of
 
 #### How to compute a new grade to a product ?
 
- {% include BokehGraph_New_Rating.html %}
- <center><em>Figure 3 : Computation of the new rating for 5 different items</em></center>
+ {% include BokehGraph_New_Rating_Review.html %}
+ <center><em>Figure 3 : Computation of the new rating for 5 different reviews</em></center>
  
+  {% include BokehGraph_New_Rating_Product.html %}
+ <center><em>Figure 4 : Computation of the new rating for 5 different products</em></center>
  
  
  _Citations : Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering, R. He, J. McAuley, WWW, 2016_
