@@ -22,5 +22,5 @@ We can clearly see that the graph is a power law !
 {% include BokehGraph_Review_per_Ratings.html %}
 <p align="center">
  {% include BokehGraph_New_Rating.html %}
- _Figure 3 : Computation of the new rating for 5 different items
+ _Figure 3 : Computation of the new rating for 5 different items_
 </p>
