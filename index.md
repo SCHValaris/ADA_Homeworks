@@ -29,7 +29,9 @@ We can observe that the distribution nearly follows a power law. The majority of
 
 
 Let's take a look at the distribution of the products in the Electronic category:
-
+<p align="center"> 
+ <img src="/img/Sentiment_distribution.svg">
+</p>
 ![Graph_Sentiment_distribution](/img/Sentiment_distribution.svg)
 <center><em>
  Distribution of the Sentiments of the reviews of the products in the "Electronic" category </em></center>
