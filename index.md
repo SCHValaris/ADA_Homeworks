@@ -5,9 +5,9 @@ subtitle: An analysis of Amazon's reviews
 use-site-title: true
 ---
 
-# Introduction
+#### Introduction
 Reviews systems are a key feature of most online shopping sites such as amazon. They make available to the customer the experience of multiples other customers, emulating a word of mouth opinion circulation. The force of these systems resides in the fact that the customer does not need to personally know the reviewer to get his/her opinion: it is just available on the shopping site. While this certainly helps customers which do not personaly know someone who bought or tested the product they are currently interested in, it may also be misleading because the customer does not know the background of the reviewer. For instance, the reviewers previous experience in the product category, his/her grading exigencies are not always detailed in the review, thus the customer may not be able to judge the reviewer point of view, and eventual biases. Can we infer these information from the data we have on the reviewer, and provide them to the customer to help him evaluate the review ?
-The reviews were obtained from [amazon reviews](http://jmcauley.ucsd.edu/data/amazon/links.html).
+The reviews were obtained from [a dataset that contaings 142.8 millions reviews spanning May 1996-July 2014](http://jmcauley.ucsd.edu/data/amazon/links.html).
 
 First, let's observe the distribution of ratings across all the Amazon's reviews available
 
@@ -28,7 +28,7 @@ Before going into the depth of the analysis, let's vizualise the number of revie
 We can observe that the distribution nearly follows a power law. The majority of products have a low number of reviews. To perform our analysis we decided to take only the reviewers and products that have at least 5 reviews. For that we use a 5-core dataset. We also chose to focus our analysis on the _Electronics_ category as it offer a lot of product diversity and is less prone to subjectivity than categories like _Books,Video Games_. 
 
 
-### How to compute a new grade to a product ?
+#### How to compute a new grade to a product ?
 
  {% include BokehGraph_New_Rating.html %}
  <center><em>Figure 3 : Computation of the new rating for 5 different items</em></center>
