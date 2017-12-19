@@ -6,8 +6,12 @@ use-site-title: true
 ---
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-{% include mathjax_support %}
+<html>{% include mathjax_support %}<\html>
+<html>{% include mathjax_support %}
+<div> $\sum$ </div>
+<div> $\sum$ </div>
+<div> <span>$\sum$</span> </div>
+<div> <span>$\sum$</span> </div><\html>
 <div> $\sum$ </div>
 <div> $\sum$ </div>
 <div> <span>$\sum$</span> </div>
