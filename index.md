@@ -58,7 +58,7 @@ Let's take a look at the distribution of the products in the Electronic category
 We focus on computing a new rate for a product. We beforehand get more insight about the product itself. We display some plots to help us to visualize what's going on.
  
  <p align="center"> 
- <img src="/ADA_Homeworks/img/graphs.png">
+ <img src="/ADA_Homeworks/img/final_graph.png">
 </p>
 <center><em>
  Distributions of the categories in which the reviewers purchased an item and deviation from the mean
