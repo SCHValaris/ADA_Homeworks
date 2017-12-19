@@ -144,4 +144,7 @@ The new ratings can visualized in the plot below:
  
 Our rating can be tuned by a customer to get a rating corresponding to his/her criteria. To improve it further, we could consider more criteria like the length of the reviews or the helpfulness rating (given by the other customer). 
  
- _Citations : Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering, R. He, J. McAuley, WWW, 2016_
+ **Citations**
+- Dataset : _Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering, R. He, J. McAuley, WWW, 2016_
+- NLTK/Vader library : _Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014._
+- Bokeh library : _Bokeh Development Team (2014). Bokeh: Python library for interactive visualization_
