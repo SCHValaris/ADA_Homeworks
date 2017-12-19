@@ -47,7 +47,7 @@ The distribution looks similar to the ratings distribution, and is clearly skewe
  <img src="/ADA_Homeworks/img/double.svg">
 </p>
 <center><em> 
- Distribution of averages of the sentiment and ratings of the reviews, per product in the "Electronic" category 
+ Distribution of averages per product of the sentiment and ratings of the reviews, for products in the "Electronic" category 
  </em></center>
  The average distribution of the rating and sentiment score is around 4.2. This means that the products that have the most reviews are also those which get the better ratings, which skews the total distributions of the ratings toward 5. 
  
