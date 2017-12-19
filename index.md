@@ -107,7 +107,7 @@ $$
 \end{align*}
 $$
 
-We can visualize how our new rating works on the graph below: the colors show the contribution of each part (sentiment, reviewer rating, average and absolute value) to the new rating.
+We can visualize how our new rating works on the graph below: the colors show the contribution of each part (sentiment, reviewer rating, average and absolute value) to the new rating. The reviews were taken from [this product](https://www.amazon.com/dp/0528881469)
 
  {% include BokehGraph_New_Rating_Review.html %}
  <center><em> Computation of the new rating for 5 different reviews</em></center>
