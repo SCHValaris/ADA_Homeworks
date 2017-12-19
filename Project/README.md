@@ -1,13 +1,9 @@
-# Reviews, do you help me ?
+# Reviews, what are you hiding ?
+
+** Website : https://c-lefebvre.github.io/ADA_Homeworks/ **
 
 # Abstract
-Amazon reviews play a part in the final decision of a customer when buying an item. However the reviewers previous experience in the product category, his/her grading exigencies are not always detailed in the review, thus the customer may not be able to judge the reviewer point of view, and eventual biases. The goal of our data analysis is to determine the bias of a review and provide this information to the buyer to help him determine the degree of usefulness of the review.
-
-# Research questions
-- Can we determine if a reviewer is biased in his reviews ?
-- Are there reviewers more prone to give useful information on a new review based on their old reviews ?
-- Are all reviews trustworthy ? Is it possible to detect fake reviews ?
-- Are reviewers influenced by the price of the products ?
+Reviews systems are a key feature of most online shopping sites such as Amazon. They make available to the customer the experience of multiples other customers, emulating a word of mouth opinion circulation. The force of these systems resides in the fact that the customer does not need to personally know the reviewer to get his/her opinion: it is just available on the shopping site. While this certainly helps customers which do not personally know someone who bought or tested the product they are currently interested in, it may also be misleading because the customer does not know the background of the reviewer. For instance, the reviewers previous experience in the product category, his/her grading exigencies are not always detailed in the review, thus the customer may not be able to judge the reviewer point of view, and eventual biases. Can we infer these information from the data we have on the reviewer, and provide them to the customer to help him evaluate the review ? 
 
 
 # Dataset
@@ -16,7 +12,7 @@ Amazon reviews play a part in the final decision of a customer when buying an it
 
 # Who did what ?
 - Nelson Antunes :
-- Clément Lefebvre : Analysis of the large parts of the dataset using Spark (e.g ratings per category, number of reviews per category ...). Managing the construction of the website. Plotting of the interactive graph using Bokeh to put on the website.
+- Clément Lefebvre : Analysis of the large parts of the dataset using Spark (e.g ratings per category, number of reviews per category ...). Construction and maintenance of the website. Plotting of the interactive graph using Bokeh to put on the website.
 - Vincent Pollet : 
 
 
