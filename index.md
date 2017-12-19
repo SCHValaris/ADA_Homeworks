@@ -7,6 +7,8 @@ use-site-title: true
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
+
 $$
 \begin{align*}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
@@ -24,15 +26,11 @@ $$
 \end{align*}
 $$
 
-
-
-<div>$$a^2 + b^2 = c^2$$</div>
-
-#### Introduction??
+#### Introduction
 Reviews systems are a key feature of most online shopping sites such as Amazon. They make available to the customer the experience of multiples other customers, emulating a word of mouth opinion circulation. The force of these systems resides in the fact that the customer does not need to personally know the reviewer to get his/her opinion: it is just available on the shopping site. While this certainly helps customers which do not personally know someone who bought or tested the product they are currently interested in, it may also be misleading because the customer does not know the background of the reviewer. For instance, the reviewers previous experience in the product category, his/her grading exigencies are not always detailed in the review, thus the customer may not be able to judge the reviewer point of view, and eventual biases. Can we infer these information from the data we have on the reviewer, and provide them to the customer to help him evaluate the review ?
 The reviews were obtained from [a dataset that contains 142.8 millions reviews spanning May 1996-July 2014](http://jmcauley.ucsd.edu/data/amazon/links.html).
 
-First,$$a^2$$ let's observe the distribution of ratings across all the Amazon's reviews available
+First, let's observe the distribution of ratings across all the Amazon's reviews available
 
 {% include BokehGraph_Review_per_Ratings.html %}
 <center><em>Figure 2 : Number of reviews given for each rating for multiple categories</em></center>
@@ -113,13 +111,19 @@ This one shows us for a given product, the deviation between the mean of the rat
 We will again use this to compute the new rates.
 
 #### How to compute a new grade for a product ?
-We will start by computin a new rating for the review of a product, based on the information we have on the reviewer, the rating of the review and the sentiment analysis of the review text.
+A product rating is usually computed as an average on the ratings given by the reviewers. Thus, to compute a new product rating, we first have to compute a new rating for a review ! This new rating can be divded in two parts:
+- A part depending on the sentiment, let us call it $$\text{Sentiment}$$
+- A part depending on the rating given by the reviewer, $$\text{Rating}$$
 
-Let us note $\text{Rating}(r)$ the rating of the review, and $\text{Sentiment}(r)$ the sentiment rating of a review, on a scale from 1 to 5, where 1 is very negative and 5 very positive. Moreover, let us note by $<\cdot>_{\text{product}}$ an average operation on all the reviews of a product.
-We propose to compute the new rating of a review as follows :
+The new rating is computed as a weighted average of the two:
+$$
 \begin{equation}
- \text{new rating}(r) = w_s \left( w_sr \left(\text{Sentiment}(r) + \braket{Sentiment(r)} \right) \right)
+    \text{new rating} = w_s \text{Sentiment} + (1-w_s)\text{Rating}
 \end{equation}
+$$
+where $$w_s$$ is a weight between 0 and 1 describing the importance we give to each part. If $$w_s = 0$$, then the new rating is the just the rating given by the user, without taking into account the sentiment analysis ; and if $$w_s = 1$$ the new rating is entirely based on the sentiment analysis.
+
+
 
 
 
