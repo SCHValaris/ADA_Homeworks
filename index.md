@@ -33,26 +33,24 @@ Before going into the depth of the analysis, let's vizualise the number of revie
 We can observe that the distribution nearly follows a power law. The majority of products (showed by the red line) have a low number of reviews. To perform our analysis we decided to take only the reviewers and products that have at least 5 reviews. For that we use a 5-core dataset. We also chose to focus our analysis on the _Electronics_ category as it offer a lot of product diversity and is less prone to subjectivity than categories like _Books,Video Games_.  
 
 
-Let's take a look at the distribution of the products in the Electronic category:
+Let's take a look at the distribution of the sentiment score for the products in the Electronic category.
+
 <p align="center"> 
  <img src="/ADA_Homeworks/img/Sentiment_distribution.svg">
 </p>
 <center><em>
  Distribution of the Sentiments of the reviews of the products in the "Electronic" category </em></center>
 
+The distribution looks similar to the ratings distribution, and is clearly skewed to toward 5. A vast majority of the reviews convey a very positive sentiment about their product. However, the products themselves are not so well perceived, as we can see on the graph bellow:
+
 <p align="center"> 
- <img src="/ADA_Homeworks/img/Sentiment_distribution_groupby_product.svg">
+ <img src="/ADA_Homeworks/img/double.svg">
 </p>
 <center><em> 
- Distribution of average of the sentiment of the reviews, per product in the "Electronic" category 
+ Distribution of averages of the sentiment and ratings of the reviews, per product in the "Electronic" category 
  </em></center>
+ The average distribution of the rating and sentiment score is around 4.2. This means that the products that have the most reviews are also those which get the better ratings, which skews the total distributions of the ratings toward 5. 
  
-<p align="center"> 
- <img src="/ADA_Homeworks/img/Rating_distribution_groupby_product.svg">
-</p>
-<center><em>
- Distribution of average of the Rating given in the reviews, per product in the "Electronic" category
- </em></center>
  
 #### Focus on a given product
 We focus on computing a new rate for a product. We beforehand get more insight about the product itself. We display some plots to help us to visualize what's going on.
