@@ -49,7 +49,16 @@ Let's take a look at the distribution of the products in the Electronic category
  Distribution of average of the Rating given in the reviews, per product in the "Electronic" category
  </em></center>
 
-#### How to compute a new grade to a product ?
+#### How to compute a new grade for a product ?
+We will start by computin a new rating for the review of a product, based on the information we have on the reviewer, the rating of the review and the sentiment analysis of the review text.
+
+Let us note $\text{Rating}(r)$ the rating of the review, and $\text{Sentiment}(r)$ the sentiment rating of a review, on a scale from 1 to 5, where 1 is very negative and 5 very positive. Moreover, let us note by $<\cdot>_{\text{product}}$ an average operation on all the reviews of a product.
+We propose to compute the new rating of a review as follows :
+\begin{equation}
+ \text{new rating}(r) = w_s \left( w_sr \left(\text{Sentiment}(r) + \braket{Sentiment(r)} \right) \right)
+\end{equation}
+
+
 
  {% include BokehGraph_New_Rating_Review.html %}
  <center><em>Figure 3 : Computation of the new rating for 5 different reviews</em></center>
