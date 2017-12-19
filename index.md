@@ -119,18 +119,60 @@ The new rating is computed as a weighted average of the two:
 
 $$
 \begin{equation}
-    \text{new rating} = w_s\cdot\text{Sentiment} + (1-w_s)\cdot\text{Rating}
+    \text{new rating} = w_s\cdot\text{Sentiment} + (1-w_s)\text{Rating}
 \end{equation}
 $$
 
 where $$w_s$$ is a weight between 0 and 1 describing the importance we give to each part. If $$w_s = 0$$, then the new rating is the just the rating given by the user, without taking into account the sentiment analysis ; and if $$w_s = 1$$ the new rating is entirely based on the sentiment analysis.
 
+We want to include into the new rating as much information about the reviewer as we can. To do this, we can look at the difference between the sentiment of all his review and the average sentiment of his reviews. If this difference is positive, the reviewer liked the product more than usual, and if it is negative he did not appreciate the product as much as he usually do. The difference between a value and the average is in the interval $$[-4, 4]$$, which we can map to $$[1,5]$$ to compare it to compare it to the absolute values of sentiment and ratings. Each part is thus decomposed as:
 
+$$
+\begin{align*}
+    \text{Sentiment} &= w_{sr}\cdot \text{Sentiment}(\text{review}) + (1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) \\
+    \text{Rating} &= w_{gr}\cdot \text{Rating}(\text{review}) + (1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review})))
+\end{align*}
+$$
 
+where $$w_{sr}$$ and $$w_{gr}$$ are the weights (between 0 and 1) given to the absolute values of Sentiment or Rating with respect to the difference to the average. 
 
+The new rating is thus computed as :
+
+$$
+\begin{equation}
+\text{New Rating} = w_s \left( w_{sr}\cdot \text{Sentiment}(\text{review}) + (1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) \right) + (1-w_s) \left( w_{gr}\cdot \text{Rating}(\text{review}) + (1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review}))) \right)
+\end{equation}
+$$
+
+We can see the new ratings on the plot bellow:
 
  {% include BokehGraph_New_Rating_Review.html %}
  <center><em>Figure 3 : Computation of the new rating for 5 different reviews</em></center>
+
+Now that we have our new rating for a review, we can compute the new rating of a product. The new rating of the product can be computed as an average on the reviews rating, but in order to give more weight to reviewer that are in a better position to judge a product. 
+
+How can we evaluate the experience of a reviewer with respect to a product ? Since we have access to all the reviewer reviews, we can look at the other products that the reviewer graded. If these products are similar to the one we want to rate, then we can assume that the reviewer has some experience in the product category: he has at least tested the products that he has reviewed. This is summed up in the "expertise" score of a reviewer in a category, which is computed as :
+
+$$
+\begin{equation}
+    \text{expertise} = \text{round}( 1 + 3 * \log \left( \text{Number of reviews in the same product category} \right))
+\end{equation}
+$$
+
+If the reviewer has graded 1 review in the same category, his expertise score is 1. If he has reviewed more, his expertise score will grow accordingly.
+
+Finally, the new rating of a product is computed as a weigthed average of :
+- the average of the new rating
+- the average of the new rating, weighted by the expertise of the reviewers
+
+$$
+\begin{equation}
+\text{new product rating} = (1 - w_e)\text{mean}_{\text{weighted by expertise}}(\text{new review ratings}) + w_e\cdot \text{mean}(\text{new review ratings})
+\end{equation}
+$$w_e$$ is the weight given to the expertise average: if it is $1$ then only this term counts in the final grading, and if it is $$0$$ the product rating is computed as an unweighted average of the new ratings.
+$$
+
+The new ratings can visualized in the plot below :
  
   {% include BokehGraph_New_Rating_Product.html %}
  <center><em>Figure 4 : Computation of the new rating for 5 different products</em></center>
