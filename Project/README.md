@@ -11,7 +11,7 @@ Reviews systems are a key feature of most online shopping sites such as Amazon. 
 
 
 # Who did what ?
-- Nelson Antunes : Processed the dataset by creating functions to parse it. Coded the functions to compute the new ratings.
+- Nelson Antunes : Processed the dataset by creating functions to parse it. Coded the functions to compute the new ratings. Plotted some data.
 - Clément Lefebvre : Analysis of the large parts of the dataset using Spark. Construction and maintenance of the website. Plotting of the interactive graph.
 - Vincent Pollet : Derived the sentiment analysis. Developed the idea and algorithm to compute the new ratings. Wrote the analysis part of the data story.
 
