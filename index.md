@@ -48,6 +48,46 @@ Let's take a look at the distribution of the products in the Electronic category
 <center><em>
  Distribution of average of the Rating given in the reviews, per product in the "Electronic" category
  </em></center>
+ 
+#### Focus on a given product
+We focus on computing a new rate for a product. We beforehand get more insight about the product itself. We display some plots to help us to visualize what's going on.
+
+<p align="center"> 
+ <img src="/ADA_Homeworks/img/rates.png">
+</p>
+<center><em>
+ Distribution of all the rates of the reviewers for a given product
+ </em></center>
+ 
+Here, for a given product we take all the reviewers (of that product) and we display all the rates of all their reviews. As we expected, there is a lot of 5 out of 5 stars meaning that the customer is often happy with their purchase. 
+
+<p align="center"> 
+ <img src="/ADA_Homeworks/img/review_length.png">
+</p>
+<center><em>
+ Distribution of the review length of the reviewers for a given product
+ </em></center>
+ 
+ We can see the length of all the reviews the reviewers had written. We see that there is a lot of reviews with few words only and few reviews with a lot of words.
+ 
+ <p align="center"> 
+ <img src="/ADA_Homeworks/img/categories_purchased.png">
+</p>
+<center><em>
+ Distribution of the categories in which the reviewers purchased an item
+ </em></center>
+ 
+ We can see here, all the categories in which all the reviewers have made a review. This helps us a lot computing the expertise.
+
+ <p align="center"> 
+ <img src="/ADA_Homeworks/img/deviation_from_mean.png">
+</p>
+<center><em>
+ Distribution of the deviation from the mean
+ </em></center>
+ 
+This one shows us for a given product, the deviation between the mean of the ratings and the current rating of the reviewers.
+We will again use this to compute the new rates.
 
 #### How to compute a new grade for a product ?
 We will start by computin a new rating for the review of a product, based on the information we have on the reviewer, the rating of the review and the sentiment analysis of the review text.
