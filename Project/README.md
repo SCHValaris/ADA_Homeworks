@@ -15,6 +15,7 @@ Reviews systems are a key feature of most online shopping sites such as Amazon. 
 - Clément Lefebvre : Analysis of the large parts of the dataset using Spark. Construction and maintenance of the website. Plotting of the interactive graph.
 - Vincent Pollet : Derived the sentiment analysis. Developed the idea and algorithm to compute the new ratings. Wrote the analysis part of the data story.
 
+- We did not split the work for the presentation yet.
 
 # Citations : 
 - Dataset : _Ups and downs: Modeling the visual evolution of fashion trends with one-class collaborative filtering, R. He, J. McAuley, WWW, 2016_
