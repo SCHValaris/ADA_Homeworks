@@ -155,10 +155,12 @@ Finally, the new rating of a product is computed as a weigthed average of :
 - the average of the new rating, weighted by the expertise of the reviewers
 
 $$
-\begin{equation}
-\text{new product rating} = (1 - w_e)\text{mean}_{\text{weighted by expertise}}(\text{new review ratings}) + w_e\cdot \text{mean}(\text{new review ratings})
-\end{equation}
+\begin{align*}
+\text{new product rating} &= (1 - w_e)\text{mean}_{\text{weighted by expertise}}(\text{new review ratings}) \\
+&+ w_e\cdot \text{mean}(\text{new review ratings})
+\end{align*}
 $$
+
 $$w_e$$ is the weight given to the expertise average: if it is $$1$$ then only this term counts in the final grading, and if it is $$0$$ the product rating is computed as an unweighted average of the new ratings.
 
 The new ratings can visualized in the plot below :
