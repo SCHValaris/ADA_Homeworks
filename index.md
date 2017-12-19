@@ -17,7 +17,7 @@ The reviews were obtained from [a dataset that contains 142.8 millions reviews s
 First, let's observe the distribution of ratings across all the Amazon's reviews available
 
 {% include BokehGraph_Review_per_Ratings.html %}
-<center><em>Figure 2 : Number of reviews given for each rating for multiple categories</em></center>
+<center><em> Number of reviews given for each rating for multiple categories</em></center>
 
 Clearly, we see that for every category, the grading are skewed to higher grades. The reviewers have a tendency to give high grades to the products they review. What about specific categories ? We can observe that the higher grades are given in the "Digital Music" category. This observation is easily explained as the majority of customer knows beforehand what is the music that they buy (by listening to radio, music videos ...) and the quality of the goods is constant which leaves little room for disapointment. Contrary to categories like "Cell phones and accessories" or "Video games" where the ratings is directly impacted by the production quality (materials used, finitions, presence of glitches ...) which increases the variance of the ratings. 
 
@@ -28,7 +28,7 @@ If everyone gives high grades, how can we distinguish a helpful reviews from a l
 Before going into the depth of the analysis, let's vizualise the number of reviews given to each product:
 
 {% include BokehGraph_Review_per_Product.html %}
-<center><em>Figure 1 : Number of products with respect to the number of reviews for multiple categories given in log-scale for both axis</em></center>
+<center><em>Number of products with respect to the number of reviews for multiple categories given in log-scale for both axis</em></center>
 
 We can observe that the distribution nearly follows a power law. The strong majority of products (showed by the blue line) have a low number of reviews. To perform our analysis we decided to take only the reviewers and products that have at least 5 reviews: the [5-core dataset](https://en.wikipedia.org/wiki/Degeneracy_(graph_theory)#k-Cores). We also chose to focus our analysis on the _Electronics_ category as it offers a lot of product diversity and is less prone to subjectivity than other categories like _Books or Video Games_.  
 
@@ -110,7 +110,7 @@ $$
 We can visualize how our new rating works on the graph below: the colors show the contribution of each part (sentiment, reviewer rating, average and absolute value) to the new rating.
 
  {% include BokehGraph_New_Rating_Review.html %}
- <center><em>Figure 3 : Computation of the new rating for 5 different reviews</em></center>
+ <center><em> Computation of the new rating for 5 different reviews</em></center>
 
 Now that we have our new rating for a review, we can compute the new rating of a product. The new rating of the product can be computed as an average on the reviews rating, but we wish to give more weight to reviewers that are in a better position to judge a product. 
 
@@ -140,7 +140,7 @@ $$w_e$$ is the weight given to the expertise term: if it is $$1$$ then only this
 The new ratings can visualized in the plot below:
  
  {% include BokehGraph_New_Rating_Product.html %}
-<center><em>Figure 4 : Computation of the new rating for 5 different products</em></center>
+<center><em> Computation of the new rating for 5 different products</em></center>
  
 Our rating can be tuned by a customer to get a rating corresponding to his/her criteria. To improve it further, we could consider more criteria like the length of the reviews or the helpfulness rating (given by the other customer). 
  
