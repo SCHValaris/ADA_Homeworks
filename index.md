@@ -116,11 +116,13 @@ A product rating is usually computed as an average on the ratings given by the r
 - A part depending on the rating given by the reviewer, $$\text{Rating}$$
 
 The new rating is computed as a weighted average of the two:
+
 $$
 \begin{equation}
-    \text{new rating} = w_s \text{Sentiment} + (1-w_s)\text{Rating}
+    \text{new rating} = w_s\cdot\text{Sentiment} + (1-w_s)\cdot\text{Rating}
 \end{equation}
 $$
+
 where $$w_s$$ is a weight between 0 and 1 describing the importance we give to each part. If $$w_s = 0$$, then the new rating is the just the rating given by the user, without taking into account the sentiment analysis ; and if $$w_s = 1$$ the new rating is entirely based on the sentiment analysis.
 
 
