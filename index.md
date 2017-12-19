@@ -4,6 +4,9 @@ title: Reviews, what are you hiding ?
 subtitle: An analysis of Amazon's reviews
 use-site-title: true
 ---
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 {% include mathjax_support %}
 <div> \sum </div>
 <div> $\sum$ </div>
