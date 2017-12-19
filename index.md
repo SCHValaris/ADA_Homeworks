@@ -9,22 +9,6 @@ use-site-title: true
 </script>
 
 
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
 
 #### Introduction
 Reviews systems are a key feature of most online shopping sites such as Amazon. They make available to the customer the experience of multiples other customers, emulating a word of mouth opinion circulation. The force of these systems resides in the fact that the customer does not need to personally know the reviewer to get his/her opinion: it is just available on the shopping site. While this certainly helps customers which do not personally know someone who bought or tested the product they are currently interested in, it may also be misleading because the customer does not know the background of the reviewer. For instance, the reviewers previous experience in the product category, his/her grading exigencies are not always detailed in the review, thus the customer may not be able to judge the reviewer point of view, and eventual biases. Can we infer these information from the data we have on the reviewer, and provide them to the customer to help him evaluate the review ?
@@ -139,9 +123,10 @@ where $$w_{sr}$$ and $$w_{gr}$$ are the weights (between 0 and 1) given to the a
 The new rating is thus computed as :
 
 $$
-\begin{equation}
-\text{New Rating} = w_s \left( w_{sr}\cdot \text{Sentiment}(\text{review}) + (1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) \right) + (1-w_s) \left( w_{gr}\cdot \text{Rating}(\text{review}) + (1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review}))) \right)
-\end{equation}
+\begin{align*}
+\text{New Rating} &= w_s \left( w_{sr}\cdot \text{Sentiment}(\text{review}) + (1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) \right) \\
+&+ (1-w_s) \left( w_{gr}\cdot \text{Rating}(\text{review}) + (1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review}))) \right)
+\end{align*}
 $$
 
 We can see the new ratings on the plot bellow:
@@ -169,8 +154,8 @@ $$
 \begin{equation}
 \text{new product rating} = (1 - w_e)\text{mean}_{\text{weighted by expertise}}(\text{new review ratings}) + w_e\cdot \text{mean}(\text{new review ratings})
 \end{equation}
-$$w_e$$ is the weight given to the expertise average: if it is $1$ then only this term counts in the final grading, and if it is $$0$$ the product rating is computed as an unweighted average of the new ratings.
 $$
+$$w_e$$ is the weight given to the expertise average: if it is $$1$$ then only this term counts in the final grading, and if it is $$0$$ the product rating is computed as an unweighted average of the new ratings.
 
 The new ratings can visualized in the plot below :
  
