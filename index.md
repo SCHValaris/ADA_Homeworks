@@ -113,8 +113,10 @@ We want to include into the new rating as much information about the reviewer as
 
 $$
 \begin{align*}
-    \text{Sentiment} &= w_{sr}\cdot \text{Sentiment}(\text{review}) + (1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) \\
-    \text{Rating} &= w_{gr}\cdot \text{Rating}(\text{review}) + (1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review})))
+    \text{Sentiment} &= w_{sr}\cdot \text{Sentiment}(\text{review}) \\
+    &+ (1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) \\
+    \text{Rating} &= w_{gr}\cdot \text{Rating}(\text{review}) \\
+    &+ (1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review})))
 \end{align*}
 $$
 
