@@ -124,10 +124,10 @@ The new rating is thus computed as :
 
 $$
 \begin{align*}
-\text{New Rating} &= w_s ( w_{sr}\cdot \text{Sentiment}(\text{review}) + \\
-&(1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) ) \\
-&+ (1-w_s) ( w_{gr}\cdot \text{Rating}(\text{review}) \\
-&+ (1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review}))) )
+\text{New Rating} &= w_s &( w_{sr}\cdot \text{Sentiment}(\text{review}) \\
+&+ &(1-w_{sr}) \text{map}(\text{Sentiment}(\text{review}) - \text{mean}(\text{Sentiment}(\text{review}))) ) \\
+&+ &(1-w_s) ( w_{gr}\cdot \text{Rating}(\text{review}) \\
+&+ &(1-w_{gr}) \text{map}(\text{Rating}(\text{review}) - \text{mean}(\text{Rating}(\text{review}))) )
 \end{align*}
 $$
 
